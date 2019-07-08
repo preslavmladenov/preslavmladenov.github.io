@@ -1,0 +1,744 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {
+	height: 100%
+}
+body {
+	min-height: 100%
+}
+
+
+.grid1 {
+	background-image: url(/pictures/background.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr /*repeat(12, [col] 1fr);*/;
+	grid-template-rows:  23% 30% 35% 5%;
+	grid-column-gap: 10px;
+	grid-row-gap: 20px;
+	grid-template-areas: 
+	"headpic headpic headpic"
+	"mainclass mainclass divforslide" 
+	"mainclass  mainclass oneframe"
+	"styleforfoot styleforfoot styleforfoot" /*oneframe*/
+}
+
+.headpic {
+	grid-area: headpic;
+	background-image: url(/pictures/ferrarihead2.jpg);
+	background-position: center;
+	opacity: 0.8;/**/
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(3, [row] 1fr);
+	grid-template-areas: 
+	"container" 
+	"forh1inheader"
+
+}
+
+.forh1inheader {
+	grid-area: forh1inheader;
+	margin-left: 33%;
+	margin-top: 3%;
+	background-color: #333;
+	text-align: center;
+	font-style: italic;
+	opacity: 0.7;
+	font-size: 45px;
+	letter-spacing: 4px;
+	color: white;
+	font-weight: lighter;
+	white-space: nowrap; 
+	max-width: 40%;
+	padding: 5px;
+}
+
+
+.container {
+	grid-area: container;
+	opacity: 0.7;
+	width: 100%;
+	
+}
+.topnav {
+	overflow: hidden;
+	background-color: #333;
+}
+.topnav .search-container {
+	float: right;
+}
+
+.topnav input[type=text] {
+	padding: 6px;
+	margin-top: 8px;
+	font-size: 17px;
+	border: none;
+	width: 40%;
+	-webkit-transition: width 0.4s ease-in-out;
+	transition: width 0.4s ease-in-out;
+}
+
+.topnav input[type=text]:hover { width: 80%;
+}
+
+
+.topnav .search-container button {
+	padding: 6px 10px;
+	margin-top: 8px;
+	background: #ddd;
+	font-size: 17px;
+	border: none;
+	cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+	background: #ccc;
+}
+
+*@media screen and (max-width: 1270px) {
+	.topnav .search-container {
+		float: none;
+
+	}
+	.topnav a, .topnav input[type=text], .topnav .search-container button {
+		display: inline-block;
+		text-align: left;
+		width: 60%;
+
+	}
+	.topnav input[type=text] {
+		border: 1px solid #ccc;  
+	}
+}
+
+.active {
+	background-color: #a6a6a6;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+li {
+	float: left;
+}
+
+li a, .dropbtn {
+	display: inline-block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+	background-color:  #a6a6a6;
+}
+
+li.dropdown {
+	display: inline-block;
+
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #333;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	left: 50px;
+
+}
+
+.dropdown-content a {
+	color: white;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.dropdown-content a:hover {background-color:  #a6a6a6;}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+}
+
+.mainclass {
+	grid-area: mainclass;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: /*40% 40% 20%*/ repeat(2, [row] 1fr);
+	grid-row-gap: 20px;
+	grid-template-areas: 
+	"picforwelcomediv"
+	"videochoise"
+
+}
+
+.picforwelcomediv {
+	display: flex;
+	justify-content: center;
+	grid-area: picforwelcomediv;
+	background-image: url(/pictures/silverferrari.jpg);
+	opacity: 0.8; /**/
+	background-position:  center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+.welcomediv {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	opacity: 0.7;
+	background-color: #333;
+	text-align: center;
+	color: white;
+	font-weight: lighter;
+	font-style: italic;
+	font-size: 27px;
+	width: 100%;
+}
+
+
+.videochoise {
+	grid-area: videochoise;
+	background-image: url(/pictures/walpforweekchoi.jpg);
+	opacity: 0.7; /**/
+	background-size: cover;
+	background-position: left;
+	background-repeat: no-repeat;
+}
+
+.videoch {
+	height: 300px;
+	width: 60%;
+}
+
+
+.thisweek1 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-basis: 100%;
+}
+
+.thisweek1 h2{
+	background-color: #333;
+	width: 100%;
+	text-align: center;
+	padding: 7px;
+	border-radius: 2px;
+	color: white;
+	opacity: 0.7;
+}
+
+.thisweek2 {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	
+}
+
+
+.thisweek2 p {
+	background-color: #333;
+	padding: 7px;
+	border-radius: 2px;
+	color: white;
+	margin-bottom: 10px;
+	margin-top: 5px;
+	width: 70%;
+	align-self: center; 
+	opacity: 0.7;
+}
+
+
+
+
+.thisweek a {
+	text-decoration: none;
+	background-color: #333;
+	padding: 7px;
+	border-radius: 2px;
+	color: white;
+	opacity: 0.7;
+
+}
+
+.thisweek a:hover {
+	background-color: #a6a4a4;
+}
+
+.ferrariframe {	
+	grid-area: oneframe;
+	opacity: 0.7;
+
+}
+
+.n1frame {
+	width: 600px;
+	height: 420px;
+	margin-left: 5px;
+
+
+
+}
+
+/*.ferrariframe {	
+	grid-area: oneframe;
+	width: 600px;
+	height: 600px;
+	opacity: 0.7;
+}
+
+.n1frame {
+	
+	width: 60%
+	height: 60%;
+}
+*/
+
+.divforslide {
+	grid-area: divforslide;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+
+}
+
+
+.slideshow-container {
+	color: white;
+	background-image: url(/pictures/BlackFerrariWallpaper.jpg);
+	opacity: 0.6; /**/
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	min-width: 600px;
+	max-width: 600px;
+	min-height: 370px;
+	max-height: 370px;
+}
+
+.mySlides {
+	display: none;
+	margin-top: 60px;
+	padding: 80px;
+	text-align: center;
+	background-color: #333;
+	opacity: 0.7;
+	max-height: 300px;
+}
+
+
+.prev, .next {
+	/*margin-top: 40px;*/
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: 100px;
+	padding: 16px;
+	color: #888;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+}
+
+
+.next {
+	position: absolute;
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+	background-color: rgba(0,0,0,0.8);
+	color: white;
+}
+
+
+
+q {
+	font-size: 20px; 
+	font-style: italic;
+}
+
+
+.author {
+	color: white;
+}
+
+.styleforfoot {
+	height: 40%;
+	grid-area: styleforfoot;
+	background-image: url(/pictures/ferrarifornews.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: white;
+	display: grid;
+	grid-template-columns: 20% 20% 20% 20%;
+	grid-template-rows: 20% 20% 20% 20%;
+}
+.mailico {
+	padding: 20px 20px;
+	color: red;
+	margin-top: 8px;
+	font-size: 60px;
+	grid-column: 6/6;
+	grid-row: 2;
+	transition: all .2s ease-in-out;
+	opacity: 0.7;
+}
+.mailico:hover {
+	transform: scale(1.3);
+	cursor: pointer;
+}
+
+.faceico {
+	padding: 20px 20px;
+	margin-top: 8px;
+	font-size: 60px;
+	color: red;
+	opacity: 0.7;
+	grid-column: 7/7;
+	grid-row: 2;
+	transition: all .2s ease-in-out;
+
+}
+.faceico:hover  {
+	cursor: pointer;
+	transform: scale(1.3);
+}
+
+.styleforfoot p {
+	grid-column: 1/4;
+	grid-row: 4;
+	background-color: #333;
+	color: red;
+	opacity: 0.7;
+	text-align: center;
+	padding: 7px;
+	font-size: 20px;
+	width: 60%;
+	font-style: italic;
+}
+
+
+
+@media screen and (max-width: 1500px) {
+	
+	.grid1 {
+		display: grid;
+		grid-template-columns: 1fr 1fr/*repeat(12, [col] 1fr);*/;
+		grid-template-rows:  25% 30% 35% 5%;
+		grid-column-gap: 5px;
+		grid-row-gap: 20px;
+		grid-template-areas: 
+		"headpic headpic"
+		"mainclass divforslide" 
+		"mainclass oneframe"
+		"styleforfoot styleforfoot" /*oneframe*/
+	}
+
+
+	.forh1inheader {
+		font-size: 27px;
+	}
+
+	.divforslide {
+		height: 200px;
+
+	}
+
+
+
+	.slideshow-container {
+		min-width: 500px;
+		max-width: 500px;
+		min-height: 350px;
+		max-height: 350px;
+	}
+
+
+	.mySlides {
+
+		margin-top: 50px;
+		padding: 80px;
+	}
+
+
+	.ferrariframe {	
+		width: 500px;
+		height: 10px;
+		opacity: 0.7;
+		padding-top: 20px;
+		padding-left: 10%;
+
+	}
+
+	.n1frame {
+		width: 100%;
+		
+
+
+
+	}
+
+
+
+
+	.videoch {
+		height: 200px;
+		width: 70%;
+	}
+
+
+	.styleforfoot p {
+		color: red;
+
+	}
+
+
+	@media screen and (max-width: 1000px) {
+
+		.grid1 {
+			display: grid;
+			grid-template-columns: 1fr/*repeat(12, [col] 1fr);*/;
+			grid-template-rows:  12% 18% 20% 20% 700px 10%;
+			grid-column-gap: 5px;
+			grid-row-gap: 20px;
+			grid-template-areas: 
+			"headpic"
+			"divforslide" 
+			"mainclass" 
+			"mainclass" 
+			"oneframe"
+			"styleforfoot" 
+		}
+
+		.divforslide {
+			grid-area: divforslide;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			min-width: 100%;
+			max-width: 100%;
+			min-height: 350px;
+			max-height: 350px;
+		}
+		/*max-height: 300px;*/
+
+	}
+
+
+
+	.slideshow-container {
+		min-width: 100%;
+		max-width: 100%;
+		min-height: 350px;
+		max-height: 350px;
+	}
+
+
+	.mySlides {
+
+		margin-top: 50px;
+		padding: 80px;
+	}
+
+
+
+
+	.videoch {
+		height: 200px;
+		width: 100%;
+	}
+	.ferrariframe {	
+		width: 100%;
+		height: 7px;
+		opacity: 0.7;
+		margin-left: -50px;
+	}
+
+
+	.styleforfoot p {
+		color: red;
+
+	}
+}
+
+
+
+@media screen and (min--moz-device-pixel-ratio:0) {
+
+
+	.styleforfoot p {
+		color: red;
+	}
+	
+	.ferrariframe {	
+		opacity: 0.7;
+		margin-bottom: 370px;
+		
+	}
+
+	.n1frame {
+		width: 600px;
+		height: 380px;
+		
+
+
+	}
+
+	.prev, .next {
+		top: 90%;
+		margin-top: 140px;
+		width: auto;
+	}
+
+	.mySlides {
+		margin-top: 20px;
+		max-height: 270px;
+		padding: 80px;
+		text-align: center;
+		background-color: #333;
+		opacity: 0.7;
+	}
+
+	@media screen and (max-width: 1500px) {
+		.ferrariframe {	
+			opacity: 0.7;
+			margin-top: 140px;
+			width: 100%
+
+		}
+
+		.n1frame {
+			width: 100%;
+			height: 380px;
+
+		}	
+
+		.prev, .next {
+			top: 40%;
+			margin-top: 40px;
+			width: auto;
+		}
+
+	}
+
+
+	@media screen and (max-width: 1000px) {
+
+
+		.grid1 {
+			display: grid;
+			grid-template-columns: 1fr/*repeat(12, [col] 1fr);*/;
+			grid-template-rows:  12% 18% 20% 20% 700px 10%;
+			grid-column-gap: 5px;
+			grid-row-gap: 20px;
+			grid-template-areas: 
+			"headpic"
+			"divforslide" 
+			"mainclass" 
+			"mainclass" 
+			"oneframe"
+			"styleforfoot" 
+		}
+
+		.divforslide {
+			grid-area: divforslide;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			min-width: 100%;
+			max-width: 100%;
+			min-height: 350px;
+			max-height: 350px;
+		}
+		/*max-height: 300px;*/
+
+	}
+
+
+
+	.slideshow-container {
+		min-width: 100%;
+		max-width: 100%;
+		min-height: 350px;
+		max-height: 350px;
+	}
+
+
+	.mySlides {
+
+		margin-top: 50px;
+		padding: 80px;
+	}
+
+	.prev, .next {
+		top: 60%;
+		width: auto;
+	}
+
+
+
+	.videoch {
+		height: 200px;
+		width: 100%;
+	}
+	
+
+	
+
+	.ferrariframe {	
+		align-content: flex-start;
+		width: 100%;
+		height: 7px;
+		opacity: 0.7;
+		/*margin-left: -20px;*/
+	}
+
+
+	.n1frame {
+		width: 100%;
+		height: 380px;
+	}
+
+
+	.styleforfoot p {
+		color: red;
+
+	}
+}
+
+
+
+
+
+
+}
+
+}
+

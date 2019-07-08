@@ -1,0 +1,257 @@
+* {box-sizing: border-box;}
+body, html {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(12, [col] 1fr);
+	grid-template-rows: repeat(5, [row] auto);
+	grid-column-gap: 1em;
+	grid-row-gap: 15px;
+}
+
+
+.headpic{
+	background-image: url(/pictures/ferrarihead2.jpg);
+	position: relative;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 50%;
+	margin: -40px 0 0 -6px;
+}
+
+.container {
+	position: absolute;
+	opacity: 0.7;
+	margin: 35px  20px; 
+	width: 55.5%;
+}
+
+.topnav {
+	overflow: hidden;
+	background-color: #333;
+}
+.topnav .search-container {
+	float: right;
+}
+
+.topnav input[type=text] {
+	padding: 6px;
+	margin-top: 8px;
+	font-size: 17px;
+	border: none;
+	width: 40%;
+	-webkit-transition: width 0.4s ease-in-out;
+	transition: width 0.4s ease-in-out;
+}
+
+.topnav input[type=text]:hover { width: 80%;
+}
+
+
+.topnav .search-container button {
+	padding: 6px 10px;
+	margin-top: 8px;
+	background: #ddd;
+	font-size: 17px;
+	border: none;
+	cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+	background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+	.topnav .search-container {
+		float: none;
+	}
+	.topnav a, .topnav input[type=text], .topnav .search-container button {
+		display: inline-block;
+		text-align: left;
+		width: 60%;
+
+	}
+	.topnav input[type=text] {
+		border: 1px solid #ccc;  
+	}
+}
+
+.active {
+	background-color: #a6a6a6;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+}
+
+li {
+	float: left;
+}
+
+li a, .dropbtn {
+	display: inline-block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+	background-color:  #a6a6a6;
+}
+
+li.dropdown {
+	display: inline-block;
+
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #333;
+	min-width: 160px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+	left: 50px;
+
+}
+
+.dropdown-content a {
+	color: white;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	text-align: left;
+}
+
+.dropdown-content a:hover {background-color:  #a6a6a6;}
+
+.dropdown:hover .dropdown-content {
+	display: block;
+
+}
+h1.forh1inheader{
+	background-color: #333;
+	text-align: center;
+	font-style: italic;
+	opacity: 0.7;
+	font-size: 45px;
+	letter-spacing: 4px;
+	position: relative;
+	height: 59px;
+	left: 240px;
+	top: 200px;
+	max-width: 72%;
+	color: white;
+	font-weight: lighter;
+	white-space: nowrap; 
+	overflow: hidden;
+	text-overflow: ellipsis;
+	width: auto;
+
+
+}
+
+.divforslide {
+	grid-column: 10/13;
+	grid-row: 1;
+	/*float: right;
+	position: relative;
+	top: -950px;*/
+}
+
+.slideshow-container {
+	position:relative;
+	color: white;
+	background: #333;
+	
+	max-width: 400px;
+	/*left: 73.3%;
+	top: 50%;/*-1550px;*/
+}
+
+
+.mySlides {
+	display: none;
+	padding: 80px;
+	text-align: center;
+}
+
+
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -30px;
+	padding: 16px;
+	color: #888;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+}
+
+
+.next {
+	position: absolute;
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+	background-color: rgba(0,0,0,0.8);
+	color: white;
+}
+
+
+.dot-container {
+	position: relative;
+	text-align: center;
+	background-color: #333;
+	padding: 20px;
+	width: 400px;
+	background: #ddd;
+	/*left: 73.3%;*/
+}
+
+.dot {
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #333;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+
+.active, .dot:hover {
+	background-color: #717171;
+}
+
+
+q {font-style: italic;}
+
+
+.author {
+	color: white;
+}
+
+.motoframe {
+	/*position: relative;
+	float: right;
+	/*margin-left: 73.3%;*/
+	/*top: 300px;*/
+}

@@ -1,0 +1,594 @@
+html linkove se definirat s <a href=///link///>tuk se pihe imeto nd linka</a> kato href e linka kum adresa
+tag <img> e za izobrajeniq
+primer - <img src="europeslostf.jpg" width="204" height="204">
+src e kartinkata koqto iskam da zaredi
+alt e alternativen text The alt attribute specifies an alternative text to be used, when an image cannot be displayed.
+width="" e za hirohcina
+height="" e za visochina
+<button> tag se izpolzva za butoni
+<ul> tag za list използва точици(unordered/bullet list)
+<ol> suhto tag za list използва номера(ordered/numbered list)
+<li> pihe se za vseki red tags (list items)
+element tag <br> prekusvane na reda i izprahta na nov red, toi nqma kraen tag(prazen tag)
+///Empty elements can be "closed" in the opening tag like this: <br />.
+
+HTML5 does not require empty elements to be closed.
+But if you want stricter validation, or if you need 
+to make your document readable by XML parsers, 
+you must close all HTML elements properly.
+
+atributa style pr: <p style=""> kazva stila ili kak da izglejda pr:<p style="color:red">I am a paragraph</p> hte bide v cherveno.
+<html lang="en-US">//lang="en-US"> se postavq v nachaloto i kazva na kakuv ezik e stranicata. 
+<p title="I'm a tooltip">title se izpolzva za izpisvane na info kogato se postavi mihkata nad paragrafa
+Attribute	Description
+alt	         Specifies an alternative text for an image, when the image cannot be displayed
+disabled	 Specifies that an input element should be disabled
+href	         Specifies the URL (web address) for a link
+id	         Specifies a unique id for an element
+src	         Specifies the URL (web address) for an image
+style	         Specifies an inline CSS style for an element
+title	         Specifies extra information about an element (displayed as a tool tip)
+tag <hr> suzdava horizontalna liniq
+<head>
+  <title>My First HTML</title>
+  <meta charset="UTF-8"> ///Metadata typically define the document title, character set, styles, links, scripts, and other meta information.
+</head>
+tagut <pre></pre> zapazva nachina po koito e napisan texta
+<body style="background-color:powderblue;"> zadava fona na stranicata
+<h1 style="font-family:verdana;">//font-family kazva s kakuv kursiv da bude napisan paragrafa, toi e podkategoria na style
+<h1 style="text-align:center;">//text-align kazva kak da bude podreden texta
+Formatirahti elementi
+<b>         Defines bold text
+<em>        Defines emphasized text 
+<i>         Defines italic text
+<small>     Defines smaller text
+<strong>    Defines important text
+<sub>       Defines subscripted text
+<sup>       Defines superscripted text
+<ins>       Defines inserted text//podchertava
+<del>       Defines deleted text//zadraskva
+<mark>      Defines marked/highlighted text
+
+tag <q></q> se izpolzva za citati kato brouserite obiknoveno si postavqt kavichki sami
+tag <blockquote> element defines a section that is quoted from another source. pr:cite="http://www.worldwildlife.org/who/index.html">
+<p>The <abbr title="World Health Organization">WHO</abbr>//abbr title suzdava sukrahteniq, olesnqva tursachkite 
+tag <address></address> se izpolzva za informaciq za avtor na saita ili stranicata, brousera goizpisva s nakloneni bukvi, kato v knigite.
+tag <cite></cite> se izpolzva obiknoveno za imena na nehto, obiknoveno brousera go izpisva v italic
+tag <bdo dir//hte izpishe izrehchenieto naobratno//="rtl">
+
+<abbr>            Defines an abbreviation or acronym
+<address>         Defines contact information for the author/owner of a document
+<bdo>             Defines the text direction
+<blockquote>      Defines a section that is quoted from another source
+<cite>            Defines the title of a work
+<q>               Defines a short inline quotation
+
+!!!tag <!-- This is a comment --> e za pisane na komentari. Toi ne se chete ot brousera i se izpolzva za podsehtane ili debugging!!!
+
+<h1 style="border:2px solid Tomato;">Hello World</h1>border:2px solid Tomato//kazva kakuv da e cveta na zagrajdeniqta na izrechenieto
+
+              CVETOVE 
+
+v html cvetovete mogat da se promenqt izpolzvaiki tazi formula //rgb(red, green, blue)//
+Each parameter (red, green, and blue) defines the intensity of the color between 0 and 255.
+For example, rgb(255, 0, 0) is displayed as red, because red is set to its highest value (255) and the others are set to 0.
+To display the color black, all color parameters must be set to 0, like this: rgb(0, 0, 0).
+To display the color white, all color parameters must be set to 255, like this: rgb(255, 255, 255). 
+
+HEX Value
+In HTML, a color can be specified using a hexadecimal value in the form:
+#rrggbb
+Where rr (red), gg (green) and bb (blue) are hexadecimal values between 00 and ff (same as decimal 0-255).
+For example, #ff0000 is displayed as red, because red is set to its highest value (ff) and the others are set to the lowest value (00).
+
+HSL Value
+In HTML, a color can be specified using hue, saturation, and lightness (HSL) in the form:
+hsl(hue, saturation, lightness)
+Hue is a degree on the color wheel from 0 to 360. 0 is red, 120 is green, and 240 is blue.
+Saturation is a percentage value, 0% means a shade of gray, and 100% is the full color.
+Lightness is also a percentage, 0% is black, 50% is neither light or dark, 100% is white
+Saturation
+Saturation can be described as the intensity of a color.
+100% is pure color, no shades of gray
+50% is 50% gray, but you can still see the color.
+0% is completely gray, you can no longer see the color.
+Lightness
+The lightness of a color can be described as how much light you want to give the color, where 0% means no light (black), 50% means 50% light (neither dark nor light) 100% means full lightness (white).
+
+RGBA Value
+RGBA color values are an extension of RGB color values with an alpha channel - which specifies the opacity for a color.
+An RGBA color value is specified with:
+rgba(red, green, blue, alpha)
+The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (not transparent at all):
+
+HSLA Value
+HSLA color values are an extension of HSL color values with an alpha channel - which specifies the opacity for a color.
+An HSLA color value is specified with:
+hsla(hue, saturation, lightness, alpha)
+The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (not transparent at all):
+
+CSS stile v html 
+Internal 
+An internal CSS is defined in the <head> section of an HTML page, within a <style> element:
+<head>
+<style>
+body {background-color: powderblue;}
+h1   {color: blue;}
+p    {color: red;}
+</style>
+</head>
+
+External CSS
+An external style sheet is used to define the style for many HTML pages.
+With an external style sheet, you can change the look of an entire web site, by changing one file!
+To use an external style sheet, add a link to it in the <head> section of the HTML page:
+PR:
+<head>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+An external style sheet can be written in any text editor. The file must not contain any HTML code, and must be saved with a .css extension.
+Primer za style.css
+body {
+  background-color: powderblue;
+}
+h1 {
+  color: blue;
+}
+p {
+  color: red;
+} 
+CSS Fonts
+The CSS color property defines the text color to be used.
+The CSS font-family property defines the font to be used.
+The CSS font-size property defines the text size to be used.
+Primer
+<style>
+h1 {
+  color: blue;
+  font-family: verdana;
+  font-size: 300%;
+}
+p  {
+  color: red;
+  font-family: courier;
+  font-size: 160%;
+}
+</style>
+</head>
+CSS Border
+The CSS border property defines a border around an HTML element:
+
+CSS Padding
+The CSS padding property defines a padding (space) between the text and the border:
+
+CSS Margin
+The CSS margin property defines a margin (space) outside the border:
+pr:
+p {
+  border: 1px solid powderblue;
+  margin: 50px;
+}
+
+The id Attribute
+To define a specific style for one special element, add an id attribute to the element:
+purvo se suzdava promenliva v head style
+#p01 {
+  color: blue;
+}
+sled tova moje da se izpolzva 
+<p id="p01">I am different</p>
+
+The class Attribute
+To define a style for special types of elements, add a class attribute to the element:
+suzdava se clas v style
+p.error {
+  color: red;
+}///error e imeto na classa
+i posle se izpolzva 
+<p class="error">I am different</p>
+
+External References
+External style sheets can be referenced with a full URL or with a path relative to the current web page.
+This example uses a full URL to link to a style sheet:
+<link rel="stylesheet" href="https://www.w3schools.com/html/styles.css">
+This example links to a style sheet located in the html folder on the current web site:
+<link rel="stylesheet" href="/html/styles.css">
+This example links to a style sheet located in the same folder as the current page:
+<link rel="stylesheet" href="styles.css">
+
+Use the HTML style attribute for inline styling
+Use the HTML <style> element to define internal CSS
+Use the HTML <link> element to refer to an external CSS file
+Use the HTML <head> element to store <style> and <link> elements
+Use the CSS color property for text colors
+Use the CSS font-family property for text fonts
+Use the CSS font-size property for text sizes
+Use the CSS border property for borders
+Use the CSS padding property for space inside the border
+Use the CSS margin property for space outside the border
+
+Linkove
+You can change the default colors, by using CSS:
+xample
+<style>
+a:link {
+  color: green; 
+  background-color: transparent; 
+  text-decoration: none;
+}
+
+a:visited {
+  color: pink;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+</style> 
+Try it Yourself »
+
+Links are often styled as buttons, by using CSS:
+<style>
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+</style> 
+
+HTML Links - The target Attribute
+The target attribute specifies where to open the linked document.
+The target attribute can have one of the following values:
+_blank - Opens the linked document in a new window or tab
+_self - Opens the linked document in the same window/tab as it was clicked (this is default)
+_parent - Opens the linked document in the parent frame
+_top - Opens the linked document in the full body of the window
+framename - Opens the linked document in a named frame
+primer:<a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a> //hte otvori v nov prozorec
+
+Linove v samata stranica - 
+purvo se suzdava samiq element
+<h2 id="C4">Chapter 4</h2> s id
+posle se suzdava link
+<a href="#C4">Jump to Chapter 4</a>
+moje da se suzdade link ot druga stranica
+<a href="html_demo.html#C4">Jump to Chapter 4</a>
+
+Use the <a> element to define a link
+Use the href attribute to define the link address
+Use the target attribute to define where to open the linked document
+Use the <img> element (inside <a>) to use an image as a link
+Use the id attribute (id="value") to define bookmarks in a page
+Use the href attribute (href="#value") to link to the bookmark
+
+border:0; se izpolzva v kartinka, za da ne se pokazn=va ramka, kogato se natisne kartinkata
+style="float:;" se izpolzva da se postavi kartinka ot lqvo ili ot dqsno na text
+pr:
+<p>
+<img src="smiley.gif" alt="Smiley face" style="float:left;width:42px;height:42px;">
+A paragraph with a floating image. A paragraph with a floating image. A paragraph with a floating image.  
+</p>
+
+Image Maps
+The <map> tag defines an image-map. An image-map is an image with clickable areas.
+pr:
+<img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+<map name="workmap">
+  <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+  <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+  <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+</map>
+
+The name attribute of the <map> tag is associated with the <img>'s usemap attribute and creates a relationship between the image and the map.
+The <map> element contains a number of <area> tags, that define the clickable areas in the image-map.
+
+Background Image
+To add a background image on an HTML element, use the CSS property background-image:
+<body style="background-image:url('clouds.jpg');">
+
+The <picture> Element
+HTML5 introduced the <picture> element to add more flexibility when specifying image resources.
+The <picture> element contains a number of <source> elements, each referring to different image sources. This way the browser can choose the image that best fits the current view and/or device.
+Each <source> element have attributes describing when their image is the most suitable.
+The browser will use the first <source> element with matching attribute values, and ignore any following <source> elements.
+Note: Always specify an <img> element as the last child element of the <picture> element. The <img> element is used by browsers that do not support the <picture> element, or if none of the <source> tags matched.
+
+Use the HTML <img> element to define an image
+Use the HTML src attribute to define the URL of the image
+Use the HTML alt attribute to define an alternate text for an image, if it cannot be displayed
+Use the HTML width and height attributes to define the size of the image
+Use the CSS width and height properties to define the size of the image (alternatively)
+Use the CSS float property to let the image float
+Use the HTML <map> element to define an image-map
+Use the HTML <area> element to define the clickable areas in the image-map
+Use the HTML <img>'s element usemap attribute to point to an image-map
+Use the HTML <picture> element to show different images for different devices
+
+Table
+An HTML table is defined with the <table> tag.
+Each table row is defined with the <tr> tag. A table header is defined with the <th> tag. By default, table headings are bold and centered. A table data/cell is defined with the <td> tag.
+<table style="width:100%">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jill</td>
+    <td>Smith</td> 
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td> 
+    <td>94</td>
+  </tr>
+</table> 
+»Note: The <td> elements are the data containers of the table.
+They can contain all sorts of HTML elements; text, images, lists, other tables, etc.
+If you do not specify a border for the table, it will be displayed without borders.
+A border is set using the CSS border property v style:
+table, th, td {
+  border: 1px solid black;
+}///Remember to define borders for both the table and the table cells.
+HTML Table - Collapsed Borders
+If you want the borders to collapse into one border, add the CSS border-collapse property:
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+HTML Table - Adding Cell Padding
+Cell padding specifies the space between the cell content and its borders.
+If you do not specify a padding, the table cells will be displayed without padding.
+To set the padding, use the CSS padding property:
+Example
+th, td {
+  padding: 15px;
+}
+
+HTML Table - Left-align Headings
+By default, table headings are bold and centered.
+To left-align the table headings, use the CSS text-align property:
+Example
+th {
+  text-align: left;
+}
+
+HTML Table - Adding Border Spacing
+Border spacing specifies the space between the cells.
+To set the border spacing for a table, use the CSS border-spacing property:
+Example
+table {
+  border-spacing: 5px;
+}///Note: If the table has collapsed borders, border-spacing has no effect.
+HTML Table - Cells that Span Many Columns
+To make a cell span more than one column, use the colspan attribute:
+Example
+<table style="width:100%">
+  <tr>
+    <th>Name</th>
+    <th colspan="2">Telephone</th>
+  </tr>
+  <tr>
+    <td>Bill Gates</td>
+    <td>55577854</td>
+    <td>55577855</td>
+  </tr>
+</table>
+
+HTML Table - Cells that Span Many Rows
+To make a cell span more than one row, use the rowspan attribute:
+Example
+<table style="width:100%">
+  <tr>
+    <th>Name:</th>
+    <td>Bill Gates</td>
+  </tr>
+  <tr>
+    <th rowspan="2">Telephone:</th>
+    <td>55577854</td>
+  </tr>
+  <tr>
+    <td>55577855</td>
+  </tr>
+</table>
+
+HTML Table - Adding a Caption
+To add a caption to a table, use the <caption> tag:
+Example
+<table style="width:100%">
+  <caption>Monthly savings</caption>
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+  </tr>
+  <tr>
+    <td>February</td>
+    <td>$50</td>
+  </tr>
+</table>//Note: The <caption> tag must be inserted immediately after the <table> tag.
+
+A Special Style for One Table
+To define a special style for a special table, add an id attribute to the table:
+Example
+<table id="t01">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Eve</td>
+    <td>Jackson</td> 
+    <td>94</td>
+  </tr>
+</table>
+
+table#t01 {
+  width: 100%; 
+  background-color: #f1f1c1;
+}
+
+
+Chapter Summary
+Use the HTML <table> element to define a table
+Use the HTML <tr> element to define a table row
+Use the HTML <td> element to define a table data
+Use the HTML <th> element to define a table heading
+Use the HTML <caption> element to define a table caption
+Use the CSS border property to define a border
+Use the CSS border-collapse property to collapse cell borders
+Use the CSS padding property to add padding to cells
+Use the CSS text-align property to align cell text
+Use the CSS border-spacing property to set the spacing between cells
+Use the colspan attribute to make a cell span many columns
+Use the rowspan attribute to make a cell span many rows
+Use the id attribute to uniquely define one table
+
+
+Tag        Description
+<table>    Defines a table
+<th>       Defines a header cell in a table
+<tr>       Defines a row in a table
+<td>       Defines a cell in a table
+<caption>  Defines a table caption
+<colgroup> Specifies a group of one or more columns in a table for formatting
+<col>      Specifies column properties for each column within a <colgroup> element
+<thead>    Groups the header content in a table
+<tbody>    Groups the body content in a table
+<tfoot>    Groups the footer content in a table
+
+List
+<ul style="list-style-type:disc;">//se izpolzva za promqna na  tochicite v lqvo na lista 
+Value        Description
+disc     Sets the list item marker to a bullet (default)
+circle   Sets the list item marker to a circle
+square   Sets the list item marker to a square
+none     The list items will not be marked
+
+<ol type="1"> kazva s kakvo hte budat nomerirani
+
+ Type        Description
+type="1"    The list items will be numbered with numbers (default)
+type="A"    The list items will be numbered with uppercase letters
+type="a"    The list items will be numbered with lowercase letters
+type="I"    The list items will be numbered with uppercase roman numbers
+type="i"    The list items will be numbered with lowercase roman numbers
+
+HTML Description Lists
+HTML also supports description lists.
+A description list is a list of terms, with a description of each term.
+The <dl> tag defines the description list, the <dt> tag defines the term (name), and the <dd> tag describes each term:
+PR:
+<dl>
+  <dt>Coffee</dt>
+  <dd>- black hot drink</dd>
+  <dt>Milk</dt>
+  <dd>- white cold drink</dd>
+</dl>
+
+Control List Counting
+By default, an ordered list will start counting from 1. If you want to start counting from a specified number, you can use the start attribute: <ol start="50">
+
+Chapter Summary
+Use the HTML <ul> element to define an unordered list
+Use the CSS list-style-type property to define the list item marker
+Use the HTML <ol> element to define an ordered list
+Use the HTML type attribute to define the numbering type
+Use the HTML <li> element to define a list item
+Use the HTML <dl> element to define a description list
+Use the HTML <dt> element to define the description term
+Use the HTML <dd> element to describe the term in a description list 
+Lists can be nested inside lists
+List items can contain other HTML elements 
+Use the CSS property float:left or display:inline to display a list horizontally
+
+
+Block
+Block level elements in HTML:
+<address>   <article>   <aside>  <blockquote>  <canvas> <dd> <div> <dl>
+<dt>  <fieldset>  <figcaption>  <figure>  <footer>  <form> <h1>-<h6> <header>
+<hr> <li> <main> <nav> <noscript> <ol> <p> <pre>  <section> <table> <tfoot> <ul> <video>
+
+Inline Elements
+An inline element does not start on a new line and only takes up as much width as necessary.
+Inline elements in HTML:
+
+<a>  <abbr>  <acronym>  <b>  <bdo> <big>  <br>  <button>
+<cite> <code>  <dfn> <em> <i> <img> <input> <kbd> <label>
+<map> <object> <output> <q> <samp> <script> <select> <small>
+<span> <strong> <sub> <sup> <textarea> <time> <tt> <var>
+
+The <div> Element
+The <div> element is often used as a container for other HTML elements.
+The <div> element has no required attributes, but style, class and id are common.
+When used together with CSS, the <div> element can be used to style blocks of content:
+
+The <span> Element
+The <span> element is often used as a container for some text.
+The <span> element has no required attributes, but style, class and id are common.
+When used together with CSS, the <span> element can be used to style parts of the text:
+
+  Tag        Description
+<div>   Defines a section in a document (block-level)
+<span>  Defines a section in a document (inline)
+
+Using The class Attribute
+The HTML class attribute is used to define equal styles for elements with the same class name.
+So, all HTML elements with the same class attribute will have the same format and style.
+Here we have three <div> elements that point to the same class name:
+
+HTML The id Attribute
+The id attribute specifies a unique id for an HTML element (the value must be unique within the HTML document).
+The id value can be used by CSS and JavaScript to perform certain tasks for a unique element with the specified id value.
+In CSS, to select an element with a specific id, write a hash (#) character, followed by the id of the element:
+Difference Between Class and ID
+An HTML element can only have one unique id that belongs to that single element, while a class name can be used by multiple elements:
+
+Bookmarks with ID and Links
+PRIMER
+<h2 id="C4">Chapter 4</h2> //First, create a bookmark with the id attribute:
+<a href="#C4">Jump to Chapter 4</a>//Then, add a link to the bookmark ("Jump to Chapter 4"), from within the same page:
+<a href="html_demo.html#C4">Jump to Chapter 4</a>//Or, add a link to the bookmark ("Jump to Chapter 4"), from another page:
+
+HTML Iframes
+An iframe is used to display a web page within a web page.
+taga <iframe></iframe> definira HTML iframe 
+<iframe src="URL"></iframe>
+Use the height and width attributes to specify the size of the iframe.
+<iframe src="demo_iframe.htm" height="200" width="300"></iframe>
+Or you can use CSS to set the height and width of the iframe:
+<iframe src="demo_iframe.htm" style="height:200px;width:300px;"></iframe>
+Iframe - Remove the Border
+To remove the border, add the style attribute and use the CSS border property:
+<iframe src="demo_iframe.htm" style="border:none;"></iframe>
+With CSS, you can also change the size, style and color of the iframe's border:
+<iframe src="demo_iframe.htm" style="border:2px solid red;"></iframe>
+Iframe - Target for a Link
+An iframe can be used as the target frame for a link.
+The target attribute of the link must refer to the name attribute of the iframe:
+<iframe src="demo_iframe.htm" name="iframe_a"></iframe>
+<p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
