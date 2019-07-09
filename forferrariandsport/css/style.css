@@ -12,7 +12,7 @@ body {
 
 
 .grid1 {
-	background-image: url(/pictures/background.jpg);
+	background-image: url(/forferrariandsport/pictures/background.jpg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -30,7 +30,7 @@ body {
 
 .headpic {
 	grid-area: headpic;
-	background-image: url(/pictures/ferrarihead2.jpg);
+	background-image: url(/forferrariandsport/pictures/ferrarihead2.jpg);
 	background-position: center;
 	opacity: 0.8;/**/
 	background-repeat: no-repeat;
