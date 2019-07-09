@@ -68,7 +68,7 @@ span {
 }
 
 #input[type=text]:focus {
-  width: 700px;
+  width: 670px;
 }
 
 @media screen and (max-width: 850px) {
