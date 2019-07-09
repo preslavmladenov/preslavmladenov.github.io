@@ -12,7 +12,7 @@ body {
 
 
 .grid1 {
-	background-image: url(https://github.com/preslavmladenov/preslavmladenov.github.io/blob/master/forferrariandsport/pictures/background.jpg);
+	background-image: url("https://preslavmladenov.github.io/forferrariandsporpictures/background.jpg");
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
