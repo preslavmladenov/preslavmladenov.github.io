@@ -1,0 +1,503 @@
+﻿<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <title>TIPI the chatBot</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <link rel="stylesheet" href="css.css" />
+
+  </head>
+
+  <body>
+
+
+    <div class="container">
+
+      <div id="field">
+        <p>
+          Здравей, аз се казвам Типи!
+        </p>
+        <p>
+          Ти как се казваш?
+        </p>
+      </div>
+      <form id="myForm">
+        <input type="text" name="userInput" id="input">
+      </form>
+    </div>
+    <script>
+      var count = 0;
+      var inputField = document.getElementById("input");
+      var interval = false;
+      
+      
+
+     /* function pageScroll() {
+        window.scrollBy(0, 1);
+        scrolldelay = setInterval(pageScroll, 10);
+
+      }*/
+      function scrollWin() {
+  window.scrollBy(0, 500);
+}
+
+      //clearInterval()
+      document.addEventListener("keypress", function(e) {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          loop();
+          count++;
+          scrollWin()
+          //pageScroll();
+
+        }
+        console.log(count);
+      });
+
+
+
+      function loop() {
+        var userInput = document.getElementById("input").value;
+        // var userName = "";
+        if (count == 0) {
+          let fieldDiv = document.getElementById("field");
+          let spa = document.createElement("SPAN");
+          spa.innerText = userInput;
+          fieldDiv.appendChild(spa);
+           let para = document.createElement("P");
+
+           
+           para.innerText = `Радвам се да се запознаем ${userInput}!`
+           para.id = "paraId"
+           fieldDiv.appendChild(para);
+           
+     
+
+
+
+          document.getElementById("myForm").reset();
+          let name = userInput;
+          userName = name;
+
+
+          let para1 = document.createElement("P");
+          para1.innerText = `И на колко си години?`
+          fieldDiv.appendChild(para1);
+          document.getElementById("myForm").reset();
+          scrollWin()
+
+
+        }
+
+
+
+
+        if (count == 1) {
+          let fieldDiv = document.getElementById("field");
+          let spa1 = document.createElement("SPAN");
+          spa1.innerText = userInput;
+          fieldDiv.appendChild(spa1);
+
+          let ageChoice = document.getElementById("input").value
+          var res = ageChoice.replace(/\D/g, '');
+          let age = parseInt(res, 10);
+          userAge = age;
+          let year = new Date();
+          let yearToday = year.getFullYear();
+          console.log(`The year is ${yearToday}`);
+          let yearBorn = yearToday - age;
+          console.log(`You are born in the year ${yearBorn}`);
+
+
+          let para2 = document.createElement("P");
+          para2.innerText = `На ${age}, което означава, че годината ти на раждане ${userName} е ${yearBorn}, а харесва ли ти тази възраст?`;
+          
+          fieldDiv.appendChild(para2);
+          document.getElementById("myForm").reset();
+          scrollWin()
+
+        }
+
+
+
+        if (count == 2) {
+          var count1 = count;
+          let fieldDiv = document.getElementById("field");
+          var userName1 = userName;
+          var userAge1 = userAge;
+          let spa2 = document.createElement("SPAN");
+          spa2.innerText = userInput;
+          fieldDiv.appendChild(spa2);
+          let choice = document.getElementById("input").value.toLowerCase();
+          var choiceNArr = ["не", "никак", "изобщо", "лоша"];
+          var choicePArr = ["да", "хубава", "забавна", "харесвам", "не е лоша", "става", "супер", "харесва"]; //"харесва"
+
+
+
+
+
+          for (let i = 0; i < choiceNArr.length; i++) {
+            var test1 = false;
+            var test2 = false;
+
+            for (let i = 0; i < choicePArr.length; i++) {
+
+              if (choice.includes(choicePArr[i]) == true) {
+
+
+                if (choice.includes(choiceNArr[i] /*"не"*/ ) == true && choice.includes(choicePArr[i] /*"да"*/ ) == true /*|| choice.includes("харесва")*/ ) {
+                  if (userAge1 < 50) {
+                    let fieldDiv = document.getElementById("field");
+                    let para3 = document.createElement("P");
+                    para3.innerText = `Съжалявам, че не ти харесва, но имаш още много време ${userName1}!`
+                    fieldDiv.appendChild(para3);
+                    document.getElementById("myForm").reset();
+                    scrollWin()
+
+                  } else {
+                    let fieldDiv = document.getElementById("field");
+                    let para3 = document.createElement("P");
+                    para3.innerText = `Съжалявам, че не ти харесва, но човек трябва да гледа напред!`
+                    fieldDiv.appendChild(para3);
+                    document.getElementById("myForm").reset();
+                    scrollWin()
+
+                  }
+                  //break;
+
+                  let fieldDiv = document.getElementById("field");
+                  let para4 = document.createElement("P");
+                  para4.innerText = `А как се чувстваш днес ${userName1}?`
+                  fieldDiv.appendChild(para4);
+                  document.getElementById("myForm").reset();
+                  test2 = true;
+                  scrollWin()
+                  break;
+                }
+                if (test2 == true) {
+                  break;
+                }
+
+
+                let fieldDiv = document.getElementById("field");
+                let para3 = document.createElement("P");
+                para3.innerText = `Много се радвам за теб!`
+                fieldDiv.appendChild(para3);
+                document.getElementById("myForm").reset();
+
+
+
+
+                //let fieldDiv = document.getElementById("field");
+                let para4 = document.createElement("P");
+                para4.innerText = `А как се чувстваш днес ${userName1}?`
+                fieldDiv.appendChild(para4);
+                document.getElementById("myForm").reset();
+                test1 = true;
+                scrollWin()
+                //break;
+              }
+
+            }
+            console.log(`this is test1 ${test1}`);
+
+            if (test2 == true) {
+              break;
+            }
+
+
+            if (choice.includes(choiceNArr[i]) == true) {
+              if (userAge1 < 50) {
+                let fieldDiv = document.getElementById("field");
+                let para3 = document.createElement("P");
+                para3.innerText = `Съжалявам, че не ти харесва, но имаш още много време ${userName1}!`
+                fieldDiv.appendChild(para3);
+                document.getElementById("myForm").reset();
+                scrollWin()
+
+              } else {
+                let fieldDiv = document.getElementById("field");
+                let para3 = document.createElement("P");
+                para3.innerText = `Съжалявам, че не ти харесва, но човек трябва да гледа напред!`
+                fieldDiv.appendChild(para3);
+                document.getElementById("myForm").reset();
+                scrollWin()
+
+              }
+              //break;
+
+              let fieldDiv = document.getElementById("field");
+              let para4 = document.createElement("P");
+              para4.innerText = `А как се чувстваш днес ${userName1}?`
+              fieldDiv.appendChild(para4);
+              document.getElementById("myForm").reset();
+               scrollWin()
+              break;
+            }
+            if (test1 = true) {
+              break;
+            }
+
+          }
+
+
+
+
+        }
+
+
+        if (count == 3) {
+          let foo = document.getElementById("input").value.toLowerCase();
+          let word = ["не", "никак", "зле", "лошо"];
+          let word2 = ["добре", "супер", "фантастично", "чудесно", "ок", "изморен", "изморена"];
+          let fieldDiv = document.getElementById("field");
+          let spa3 = document.createElement("SPAN");
+          spa3.innerText = userInput;
+          fieldDiv.appendChild(spa3);
+
+          for (let i = 0; i < word.length; i++) {
+            var test3 = false;
+            var test4 = false;
+            for (let i = 0; i < word2.length; i++) {
+              if (foo.includes(word2[i]) == true) {
+                if (foo.includes(word[i] /*"не"*/ ) == true && foo.includes(word2[i] /*"добре"*/ ) == true) {
+                  let fieldDiv = document.getElementById("field");
+                  let para5 = document.createElement("P");
+                  para5.innerText = `Съжалявам, че се чувстваш така, но утре може да бъде по - добре!`
+                  fieldDiv.appendChild(para5);
+                  document.getElementById("myForm").reset();
+
+                  let para7 = document.createElement("P");
+                  para7.innerText = `А, искаш ли да ти разкажа една смешна история, за да те развесели?`
+                  fieldDiv.appendChild(para7);
+                  document.getElementById("myForm").reset();
+                  scrollWin()
+                  test3 = true;
+
+                }
+                if (test3 == true) {
+                  break;
+                }
+                let fieldDiv = document.getElementById("field");
+                let para6 = document.createElement("P");
+                para6.innerText = `Много се радвам за теб! Дано и днес ти се случи нещо чудесно!`
+                fieldDiv.appendChild(para6);
+                document.getElementById("myForm").reset();
+
+
+
+                let para7 = document.createElement("P");
+                para7.innerText = `А, искаш ли да ти разкажа една смешна история, да направи денят ти още по-хубав?`
+                fieldDiv.appendChild(para7);
+                document.getElementById("myForm").reset();
+                scrollWin()
+                test4 = true;
+                break;
+              }
+              if (test4 == true) {
+                break;
+              }
+              if (test4 == true) {
+                break;
+              }
+            }
+            if (test4 == true) {
+              break;
+            }
+            if (test3 == true) {
+              break;
+            }
+
+            if (foo.includes(word[i]) == true) {
+              let fieldDiv = document.getElementById("field");
+              let para5 = document.createElement("P");
+              para5.innerText = `Съжалявам, че се чувстваш така, но утре може да бъде по - добре!`
+              fieldDiv.appendChild(para5);
+              document.getElementById("myForm").reset();
+
+              let para7 = document.createElement("P");
+              para7.innerText = `А, искаш ли да ти разкажа една смешна история, за да те развесели?`
+              fieldDiv.appendChild(para7);
+              document.getElementById("myForm").reset();
+               scrollWin()
+              break;
+            }
+            if (test4 == true) {
+              break;
+            }
+
+          }
+
+        }
+
+        if (count == 4) {
+          let fieldDiv = document.getElementById("field");
+          let spa4 = document.createElement("SPAN");
+          spa4.innerText = userInput;
+          fieldDiv.appendChild(spa4);
+          let jokeChoise = document.getElementById("input").value.toLowerCase();
+          let jokeNChoiseArr = ["не", "откажа", "недей"];
+          let jokePChoiseArr = ["да", "разкажи", "добре", "кажи", "разказвай", "ок"];
+
+          for (let i = 0; i < jokeNChoiseArr.length; i++) {
+            var test = false;
+
+            for (let i = 0; i < jokePChoiseArr.length; i++) {
+
+              if (jokeChoise.includes(jokePChoiseArr[i]) == true) {
+                let fieldDiv = document.getElementById("field");
+                let para8 = document.createElement("P");
+                para8.innerText = `Супер! Ето я и историята: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu lacus sit amet nisi varius semper ac vitae mauris. Nullam sem nisl, volutpat sit amet arcu nec, gravida scelerisque lorem. Suspendisse nec lectus a ipsum aliquam commodo varius vitae mauris. Nulla lobortis gravida interdum. `
+                fieldDiv.appendChild(para8);
+                document.getElementById("myForm").reset();
+                test = true;
+
+
+                let para9 = document.createElement("P");
+                para9.innerText = `Хареса ли ти историята?`
+                fieldDiv.appendChild(para9);
+                document.getElementById("myForm").reset();
+                 scrollWin()
+
+                break;
+              }
+
+            }
+            if (test == true) {
+              break;
+            }
+
+            if (jokeChoise.includes(jokeNChoiseArr[i]) == true) {
+              let fieldDiv = document.getElementById("field");
+              let para10 = document.createElement("P");
+              para10.innerText = `Добре, нищо няма да ти разказвам, но знай че ти губиш!`
+              fieldDiv.appendChild(para10);
+              document.getElementById("myForm").reset();
+
+              let para10a = document.createElement("P");
+              para10a.innerText = `До следващия път ${userName}, а дотогава се пази и очаквай следващия ъпдейт!`
+              fieldDiv.appendChild(para10a);
+              document.getElementById("myForm").reset();
+               scrollWin()
+              break;
+
+            }
+          }
+
+        }
+
+        if (count == 5) {
+          let fieldDiv = document.getElementById("field");
+          let spa5 = document.createElement("SPAN");
+          spa5.innerText = userInput;
+          fieldDiv.appendChild(spa5);
+          let jokeAnswer = document.getElementById("input").value.toLowerCase();
+          console.log(jokeAnswer);
+          var jokePAnswer = ["да", "хареса", "супер", "харесва", "хубава", "готина", "става"];
+          var jokeNAnswer = ["не", "лоша", "тъпа", "глупава"];
+          //-------------------------------------------------------------------------------------------------------------           
+          for (let i = 0; i < jokeNAnswer.length; i++) {
+            var test5 = false;
+            var test6 = false;
+            var userNameLocal = userName;
+            // console.log(`Your name is ${userNameLocal}`)
+            var hourDate = new Date();
+            var hour = hourDate.getHours();
+            var hourToUse = "";
+            if (hour < 12) {
+              hourToUse = "приятна сутрин ти пожелавам!"
+            }
+            if (hour > 12) {
+              hourToUse = "приятeн ден ти пожелавам!"
+            }
+            if (hour > 17) {
+              hourToUse = "приятна вечер ти пожелавам!"
+            }
+
+            for (let i = 0; i < jokePAnswer.length; i++) {
+
+              if (jokeAnswer.includes(jokePAnswer[i]) == true) {
+
+
+                if (jokeAnswer.includes(jokeNAnswer[i] /*"не"*/ ) == true && jokeAnswer.includes(jokePAnswer[i] /*"да"*/ ) == true /*|| choice.includes("харесва")*/ ) {
+
+                  let fieldDiv = document.getElementById("field");
+                  let para11 = document.createElement("P");
+                  para11.innerText = `Жалко, че не ти хареса историята ${userNameLocal}, мислех че ще ти хареса!`
+                  fieldDiv.appendChild(para11);
+                  document.getElementById("myForm").reset();
+
+
+
+                  let para12 = document.createElement("P");
+                  para12.innerText = `Обещавам да си взема поука ${userNameLocal}! До следващия ъпдейт ${userNameLocal}, а дотогава се пази и ${hourToUse}`
+                  fieldDiv.appendChild(para12);
+                  document.getElementById("myForm").reset();
+                  test5 = true;
+                   scrollWin()
+                  break;
+                }
+                if (test5 == true) {
+                  break;
+                }
+
+
+                let fieldDiv = document.getElementById("field");
+                let para13 = document.createElement("P");
+                para13.innerText = `Супер! Радвам се, че ти хареса! `
+                fieldDiv.appendChild(para13);
+                document.getElementById("myForm").reset();
+
+
+
+
+                //let fieldDiv = document.getElementById("field");
+                let para14 = document.createElement("P");
+                para14.innerText = `Очаквай повече неща в следващия ъпдейт ${userNameLocal}! А дотогава ${hourToUse}`
+                fieldDiv.appendChild(para14);
+                document.getElementById("myForm").reset();
+                 scrollWin()
+                test6 = true;
+                //break;
+              }
+
+            }
+
+            if (test5 == true) {
+              break;
+            }
+
+
+            if (jokeAnswer.includes(jokeNAnswer[i]) == true) {
+
+              let fieldDiv = document.getElementById("field");
+              let para15 = document.createElement("P");
+              para15.innerText = `Жалко, че не ти хареса историята ${userNameLocal}, мислех че ще ти хареса!`
+              fieldDiv.appendChild(para15);
+              document.getElementById("myForm").reset();
+
+
+
+              let para16 = document.createElement("P");
+              para16.innerText = `Обещавам да си взема поука ${userNameLocal}! До следващия ъпдейт ${userNameLocal}, а дотогава се пази и ${hourToUse}!`
+              fieldDiv.appendChild(para16);
+              document.getElementById("myForm").reset();
+               scrollWin()
+              test5 = true;
+              break;
+            }
+            if (test6 = true) {
+              break;
+            }
+
+          }
+
+        }
+     
+      }
+
+    </script>
+  </body>
+
+</html>

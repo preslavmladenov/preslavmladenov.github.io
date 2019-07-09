@@ -1,0 +1,87 @@
+﻿* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: silver;
+}
+
+.container {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  border: 3px solid black;
+  border-radius: 10px;
+  background-color: white;
+  margin-top: 2%;
+}
+
+#field {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+p {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 60px 60px 60px 60px;
+  padding: 15px;
+  margin: 6px 0 10px 7px;
+  width: 50%;
+  align-self: flex-start;
+  font-size: 22px;
+  font-style: italic;
+}
+
+span {
+  width: 50%;
+  border-color: #ccc;
+  background-color: #ddd;
+  border: 2px solid #dedede;
+  padding: 15px;
+  margin: 0px 6px 10px 7px;
+  align-self: flex-end;
+  border-radius: 60px 60px 60px 60px;
+  font-size: 22px;
+  font-style: italic;
+}
+
+#input {
+  text-align: center;
+  width: 200px;
+  border: 3px solid silver;
+  border-radius: 5px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+  font-size: 22px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+#input[type=text]:focus {
+  width: 700px;
+}
+
+@media screen and (max-width: 850px) {
+  #input[type=text] {
+    width: 100%;
+    margin-top: 0;
+  }
+  #input[type=text]:focus {
+    width: 100%;
+  }
+}
+
+.hide {
+  display: none;
+}
+
